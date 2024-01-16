@@ -1,13 +1,14 @@
 <?php
+require ('conf.php');
 //tabeli Rulood tellimine lisamine
-function lisaTellimus($mustrinr){
+function lisaTellimus($tellimus_nimi){
     global $yhendus;
     $paring=$yhendus->prepare("
-INSERT INTO rulood(mustrinr) VALUES(?)");
-    $paring->bind_param("i", $mustrinr);
+INSERT INTO tellimus(tellimus_nimi) VALUES(?)");
+    $paring->bind_param("i", $tellimus_nimi);
     $paring->execute();
 }
-// rippLoend tabelist maakonnad
+// rippLoend tabelist rulood
 function selectLoend($paring, $nimi){
     global $yhendus;
     $paring=$yhendus->prepare($paring);

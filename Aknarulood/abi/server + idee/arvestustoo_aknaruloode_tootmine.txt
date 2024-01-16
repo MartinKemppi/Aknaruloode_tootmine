@@ -1,15 +1,15 @@
+create table kasutajad(
+    id int PRIMARY KEY AUTO_INCREMENT,
+    kasutaja varchar(30) not null,
+    parool varchar(100) not null,
+    onAdmin int);
+
 create table rulood(
     id int primary key AUTO_INCREMENT,
     mustrinr text,
     riievalmis int,
     puuvalmis int,
     pakitud int);
-
-create table kasutajad(
-    id int PRIMARY KEY AUTO_INCREMENT,
-    kasutaja varchar(30) not null,
-    parool varchar(100) not null,
-    onAdmin int);
 
 create table tellimus(
     id int PRIMARY KEY AUTO_INCREMENT,

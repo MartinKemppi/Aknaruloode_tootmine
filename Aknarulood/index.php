@@ -1,11 +1,11 @@
 <?php
 // võtame ühendus serveriga skript
 require_once("conf.php");
-//
-if(isset($_REQUEST["inimene_lisamine"])){
+//tellimine lisamine
+if(isset($_REQUEST["tellimine_lisamine"])){
     //ei luba tühja väli ja tühiku sisestamine
-    if(!empty(trim($_REQUEST["mustrinr"]))){
-        lisaTellimus($_REQUEST["mustrinr"]);
+    if(!empty(trim($_REQUEST["tellimus_id"]))){
+        lisaTellimus($_REQUEST["tellimus_id"]);
     }
     header("Location: index.php");
     exit();
@@ -23,12 +23,11 @@ if(isset($_REQUEST["inimene_lisamine"])){
     <script src="skript/skript.js"></script>
 </head>
 <body>
-<h1>Inimesed ja maakonnad</h1>
+<h1>Tellimine</h1>
 <button onclick="naitaTellimusteLisamiseVorm()" id="F_lisaI">Lisa tellimus</button>
 <form id="TellimusteLisamineVorm">
-    №
     <?php echo selectLoend("select id, mustrinr from rulood","tellimus_id"); ?>
-    <input type="submit" value="Lisa inimene" name="inimene_lisamine" id="lisasiiainimene">
+    <input type="submit" value="Lisa tellimine" name="tellimine_lisamine" id="lisatellimine">
     <input type="button" value="Cancel" onclick="window.location.href='index.php'" id="cancel">
 </form>
 </body>
