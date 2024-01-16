@@ -1,0 +1,150 @@
+create table rulood(
+    id int primary key AUTO_INCREMENT,
+    mustrinr text,
+    riievalmis int,
+    puuvalmis int,
+    pakitud int);
+
+create table kasutajad(
+    id int PRIMARY KEY AUTO_INCREMENT,
+    kasutaja varchar(30) not null,
+    parool varchar(100) not null,
+    onAdmin int);
+
+create table tellimus(
+    id int PRIMARY KEY AUTO_INCREMENT,
+    tellimus_nimi int,
+    FOREIGN KEY (tellimus_nimi) REFERENCES rulood(id),
+    riievalmis int,
+    puuvalmis int,
+    pakitud int);
+
+===================================================================================================
+ruloo näided
+
+700х1400
+
+polüuretaaniga
+vill
+mikrokiud
+puuvill
+bambus
+fliis
+mayka
+coolmax
+toorsiid
+
+valge
+beež
+pruun
+must
+
+===================================================================================================
+insert into rulood(mustrinr)
+VALUE('700x1400 polüuretaaniga valge');
+
+insert into rulood(mustrinr)
+VALUE('700x1400 vill valge');
+
+insert into rulood(mustrinr)
+VALUE('700x1400 mikrokiud valge');
+
+insert into rulood(mustrinr)
+VALUE('700x1400 puuvill valge');
+
+insert into rulood(mustrinr)
+VALUE('700x1400 bambus valge');
+
+insert into rulood(mustrinr)
+VALUE('700x1400 fliis valge');
+
+insert into rulood(mustrinr)
+VALUE('700x1400 mayka valge');
+
+insert into rulood(mustrinr)
+VALUE('700x1400 coolmax valge');
+
+insert into rulood(mustrinr)
+VALUE('700x1400 toorsiid valge');
+
+insert into rulood(mustrinr)
+VALUE('700x1400 polüuretaaniga beež');
+
+insert into rulood(mustrinr)
+VALUE('700x1400 vill beež');
+
+insert into rulood(mustrinr)
+VALUE('700x1400 mikrokiud beež');
+
+insert into rulood(mustrinr)
+VALUE('700x1400 puuvill beež');
+
+insert into rulood(mustrinr)
+VALUE('700x1400 bambus beež');
+
+insert into rulood(mustrinr)
+VALUE('700x1400 fliis beež');
+
+insert into rulood(mustrinr)
+VALUE('700x1400 mayka beež');
+
+insert into rulood(mustrinr)
+VALUE('700x1400 coolmax beež');
+
+insert into rulood(mustrinr)
+VALUE('700x1400 toorsiid beež');
+
+insert into rulood(mustrinr)
+VALUE('700x1400 polüuretaaniga pruun');
+
+insert into rulood(mustrinr)
+VALUE('700x1400 vill pruun');
+
+insert into rulood(mustrinr)
+VALUE('700x1400 mikrokiud pruun');
+
+insert into rulood(mustrinr)
+VALUE('700x1400 puuvill pruun');
+
+insert into rulood(mustrinr)
+VALUE('700x1400 bambus pruun');
+
+insert into rulood(mustrinr)
+VALUE('700x1400 fliis pruun');
+
+insert into rulood(mustrinr)
+VALUE('700x1400 mayka pruun');
+
+insert into rulood(mustrinr)
+VALUE('700x1400 coolmax pruun');
+
+insert into rulood(mustrinr)
+VALUE('700x1400 toorsiid pruun');
+
+insert into rulood(mustrinr)
+VALUE('700x1400 polüuretaaniga must');
+
+insert into rulood(mustrinr)
+VALUE('700x1400 vill must');
+
+insert into rulood(mustrinr)
+VALUE('700x1400 mikrokiud must');
+
+insert into rulood(mustrinr)
+VALUE('700x1400 puuvill must');
+
+insert into rulood(mustrinr)
+VALUE('700x1400 bambus must');
+
+insert into rulood(mustrinr)
+VALUE('700x1400 fliis must');
+
+insert into rulood(mustrinr)
+VALUE('700x1400 mayka must');
+
+insert into rulood(mustrinr)
+VALUE('700x1400 coolmax must');
+
+insert into rulood(mustrinr)
+VALUE('700x1400 toorsiid must');
+===================================================================================================
