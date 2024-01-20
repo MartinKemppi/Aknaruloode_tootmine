@@ -3,6 +3,24 @@
 require_once("conf.php");
 require_once("funktsioonid.php");
 session_start();
+
+// eiolevalmis
+if (isset($_REQUEST["eiolevalmis"])) {
+    global $yhendus;
+    $kask = $yhendus->prepare("UPDATE tellimus SET puuvalmis = 0 WHERE id=?");
+    $kask->bind_param("i", $_REQUEST["eiolevalmis"]);
+    $kask->execute();
+    header("Location: $_SERVER[PHP_SELF]");
+}
+
+// onvalmis
+if (isset($_REQUEST["onvalmis"])) {
+    global $yhendus;
+    $kask = $yhendus->prepare("UPDATE tellimus SET puuvalmis = 1 WHERE id=?");
+    $kask->bind_param("i", $_REQUEST["onvalmis"]);
+    $kask->execute();
+    header("Location: $_SERVER[PHP_SELF]");
+}
 ?>
 <!doctype html>
 <html lang="et">
@@ -52,5 +70,43 @@ if(isset($_SESSION['kasutaja'])){
     <?php
 }
 ?>
+<h2>Puu tellimised</h2>
+<div style="overflow-x: auto;">
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Mustrinr</th>
+            <th>Riievalmis</th>
+            <th>Puuvalmis</th>
+            <th>Valmis</th>
+        </tr>
+        <?php
+        global $yhendus;
+        if (isset($_SESSION['kasutaja']) && $_SESSION['onAdmin'] == 2) {
+            $kask = $yhendus->prepare("SELECT tellimus.id, tellimus_nimi, rulood.mustrinr, tellimus.riievalmis, tellimus.puuvalmis FROM tellimus INNER JOIN rulood ON tellimus.tellimus_nimi = rulood.id");
+            $kask->bind_result($id, $tellimus_nimi, $ruloodmustrinr, $ruloodriievalmis, $tellimuspuuvalmis);
+            $kask->execute();
+            while ($kask->fetch()) {
+                $tekst = "Valmis";
+                $seisund = "onvalmis";
+                $tekst2 = "Toode ei ole valmis";
+                if ($tellimuspuuvalmis == 1) {
+                    $tekst = "Ei ole valmis";
+                    $seisund = "eiolevalmis";
+                    $tekst2 = "Toode on valmis";
+                }
+                echo "<tr>";
+                $tellimus_nimi = htmlspecialchars($tellimus_nimi);
+                echo "<td>" . $id . "</td>";
+                echo "<td>" . $ruloodmustrinr . "</td>";
+                echo "<td>" . $ruloodriievalmis . "</td>";
+                echo "<td>" . $tellimuspuuvalmis . "</td>";
+                echo "<td><a href='?$seisund=$id'>$tekst</a></td>";
+                echo "</tr>";
+            }
+        }
+        ?>
+    </table>
+</div>
 </body>
 </html>

@@ -3,6 +3,15 @@
 require_once("conf.php");
 require_once("funktsioonid.php");
 session_start();
+
+//andmete kustutamine tabelist
+if(isset($_REQUEST["kustuta"])){
+    global $yhendus;
+    $paring = $yhendus->prepare("DELETE FROM tellimus WHERE id=?");
+    $paring->bind_param("i", $_REQUEST["kustuta"]);
+    $paring->execute();
+    header("Location: $_SERVER[PHP_SELF]");
+}
 ?>
 <!doctype html>
 <html lang="et">
@@ -52,5 +61,36 @@ if(isset($_SESSION['kasutaja'])){
     <?php
 }
 ?>
+<h2>Admin haldus</h2>
+<div style="overflow-x: auto;">
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Mustrinr</th>
+            <th>Riievalmis</th>
+            <th>Puuvalmis</th>
+            <th>Komplekteerimine</th>
+            <th>Kustuta</th>
+        </tr>
+        <?php
+        global $yhendus;
+        if (isset($_SESSION['kasutaja']) && $_SESSION['onAdmin'] == 4) {
+            $kask = $yhendus->prepare("SELECT tellimus.id, tellimus_nimi, rulood.mustrinr, tellimus.riievalmis, tellimus.puuvalmis, tellimus.pakitud FROM tellimus INNER JOIN rulood ON tellimus.tellimus_nimi = rulood.id");
+            $kask->bind_result($id, $tellimus_nimi, $ruloodmustrinr, $ruloodriievalmis, $tellimuspuuvalmis, $tellimuspakitud);
+            $kask->execute();
+            while ($kask->fetch()) {
+                echo "<tr>";
+                $tellimus_nimi = htmlspecialchars($tellimus_nimi);
+                echo "<td>" . $id . "</td>";
+                echo "<td>" . $ruloodmustrinr . "</td>";
+                echo "<td>" . $ruloodriievalmis . "</td>";
+                echo "<td>" . $tellimuspuuvalmis . "</td>";
+                echo "<td>" . $tellimuspakitud . "</td>";
+                echo "</tr>";
+            }
+        }
+        ?>
+    </table>
+</div>
 </body>
 </html>
