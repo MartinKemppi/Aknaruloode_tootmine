@@ -3,6 +3,15 @@
 require_once("conf.php");
 require_once("funktsioonid.php");
 session_start();
+//tellimine lisamine
+if(isset($_REQUEST["tellimine_lisamine"])){
+    //ei luba tühja väli ja tühiku sisestamine
+    if(!empty(trim($_REQUEST["tellimus_id"]))){
+        lisaTellimus($_REQUEST["tellimus_id"]);
+    }
+    header("Location: tellimine.php");
+    exit();
+}
 ?>
 <!doctype html>
 <html lang="et">
@@ -19,27 +28,14 @@ session_start();
             document.getElementById("modal_log").style.display = "flex";
         }
 
-        function avaModalReg() {
-            document.getElementById("modal_reg").style.display = "flex";
-        }
-
         function suleModalLog() {
             document.getElementById("modal_log").style.display = "none";
-        }
-
-        function suleModalReg() {
-            document.getElementById("modal_reg").style.display = "none";
         }
 
         window.onclick = function (event) {
             var modalLog = document.getElementById("modal_log");
             if (event.target == modalLog) {
                 suleModalLog();
-            }
-
-            var modalReg = document.getElementById("modal_reg");
-            if (event.target == modalReg) {
-                suleModalReg();
             }
         }
     </script>
@@ -50,14 +46,6 @@ session_start();
         <a class="modal__close" href="#">X</a>
         <?php
         require 'login.php';
-        ?>
-    </div>
-</div>
-<div id="modal_reg">
-    <div class="modal__window">
-        <a class="modal__close" href="#">X</a>
-        <?php
-        require 'register.php';
         ?>
     </div>
 </div>
@@ -74,22 +62,14 @@ if(isset($_SESSION['kasutaja'])){
     <?php
 }
 ?>
-<?php
-if(isset($_SESSION['kasutaja'])){
-    ?>
-    <!--
-    <div class="open">
-        <a href="#modal_reg" onclick="avaModalReg()">Registreeri</a>
-    </div>
-    -->
-    <?php
-} else {
-    ?>
-    <div class="open">
-        <a id="regimind" href="#modal_reg" onclick="avaModalReg()">Registreeri</a>
-    </div>
-    <?php
-}
-?>
+<h1>Tellimine</h1>
+<button onclick="naitaTellimusteLisamiseVorm()" id="F_lisaI">Lisa tellimus</button>
+<form id="TellimusteLisamineVorm" method="post">
+    <label for="tellimus_id">Vali ruloo:</label>
+    <?php echo selectLoend("SELECT id, mustrinr FROM rulood", "tellimus_id"); ?>
+    <input type="submit" value="Lisa tellimus" name="tellimine_lisamine" id="lisatellimine">
+    <input type="button" value="Tühista" onclick="window.location.href='index.php'" id="cancel">
+</form>
+
 </body>
 </html>

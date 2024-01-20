@@ -1,4 +1,4 @@
-create table kasutajad(
+﻿create table kasutajad(
     id int PRIMARY KEY AUTO_INCREMENT,
     kasutaja varchar(30) not null,
     parool varchar(100) not null,
@@ -148,3 +148,36 @@ VALUE('700x1400 coolmax must');
 insert into rulood(mustrinr)
 VALUE('700x1400 toorsiid must');
 ===================================================================================================
+
+1 - veebileht - Pealeht - logi sisse/välja ja registreerimine
+2.1 - veebileht - Tellimine - logitud sisse saab tellida
+2.2 - veebileht - Kliendi seisukord tellimusega - näeb olukorra oma tellimusega
+3 - veebileht - Riideosakond - määrab riie lõigamise töö e. valmis/pole valmis
+4 - veebileht - Puuosakond - määrab puu tööd e. valmis/pole valmis
+5 - veebileht - Komplekteerijad - määravad kui toode pakitud/ei ole pakitud
+
+===================================================================================================
+OnAdmin            |
+-------------------|
+0 - klient         |
+1 - riideosakond   |
+2 - puuosakond     |
+3 - komplekteerijad|
+4 - admin          |
+-------------------|
+Õigused            |
+-------------------|--------------------------|
+0 - tellimine ja näeb oma tellimuse seisukorra|
+1 - näeb tellitud toode, määrab valmis jah/ei |----|
+2 - näeb toode + riide valmis, määrab valmis jah/ei|------------|
+3 - näeb toode + riide valmis + puu valmis, määrab valmis jah/ei|
+4 - võib kustutada, näha tellimised                             |
+----------------------------------------------------------------|
+kasutajad                                                       |
+----------------------------------------------------------------|
+riideosakond : f888G|K)eV
+puuosakond : G32s3=$JAX
+komplekteerijad : Ub382#SmHp
+admin : 53Vk$4BEnQ
+===================================================================================================
+

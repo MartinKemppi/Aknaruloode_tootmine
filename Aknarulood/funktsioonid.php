@@ -5,7 +5,7 @@ function lisaTellimus($tellimus_nimi){
     global $yhendus;
     $paring=$yhendus->prepare("
 INSERT INTO tellimus(tellimus_nimi) VALUES(?)");
-    $paring->bind_param("i", $tellimus_nimi);
+    $paring->bind_param("s", $tellimus_nimi);
     $paring->execute();
 }
 // rippLoend tabelist rulood

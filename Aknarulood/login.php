@@ -21,10 +21,20 @@ if (!empty($_POST['login']) && !empty($_POST['pass'])) {
         $_SESSION['tuvastamine'] = 'misiganes';
         $_SESSION['kasutaja'] = $login;
         $_SESSION['onAdmin'] = $onAdmin;
-        if ($onAdmin == 1) {
-            echo '<script>window.location.href = "index.php";</script>';
-        } else {
-            echo '<script>window.location.href = "index.php";</script>';
+        if ($onAdmin == 0) {
+            echo '<script>window.location.href = "tellimine.php";</script>';
+        }
+        else if ($onAdmin == 1) {
+            echo '<script>window.location.href = "riideosakond.php";</script>';
+        }
+        else if ($onAdmin == 2) {
+            echo '<script>window.location.href = "puuosakond.php";</script>';
+        }
+        else if ($onAdmin == 3) {
+            echo '<script>window.location.href = "komplekteerijad.php";</script>';
+        }
+        else if ($onAdmin == 4) {
+            echo '<script>window.location.href = "adminLeht.php";</script>';
         }
         $yhendus->close();
         exit();
