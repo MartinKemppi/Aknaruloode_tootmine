@@ -1,11 +1,10 @@
 <?php
 require ('conf.php');
 //tabeli Rulood tellimine lisamine
-function lisaTellimus($tellimus_nimi){
+function lisaTellimus($tellimus_nimi,$kasutaja){
     global $yhendus;
-    $paring=$yhendus->prepare("
-INSERT INTO tellimus(tellimus_nimi) VALUES(?)");
-    $paring->bind_param("s", $tellimus_nimi);
+    $paring=$yhendus->prepare("INSERT INTO tellimus(tellimus_nimi, kasutaja) VALUES(?,?)");
+    $paring->bind_param("is", $tellimus_nimi,$kasutaja);
     $paring->execute();
 }
 // rippLoend tabelist rulood

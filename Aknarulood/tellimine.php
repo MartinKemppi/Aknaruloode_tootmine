@@ -7,9 +7,11 @@ session_start();
 if(isset($_REQUEST["tellimine_lisamine"])){
     //ei luba tühja väli ja tühiku sisestamine
     if(!empty(trim($_REQUEST["tellimus_id"]))){
-        lisaTellimus($_REQUEST["tellimus_id"]);
+
+        $kasutaja = $_SESSION['kasutaja'];
+        lisaTellimus($_REQUEST["tellimus_id"],$kasutaja);
     }
-    header("Location: tellimine.php");
+    header("Location: $_SERVER[PHP_SELF]");
     exit();
 }
 ?>

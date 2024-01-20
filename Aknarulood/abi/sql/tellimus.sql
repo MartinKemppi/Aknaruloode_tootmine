@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Loomise aeg: Jaan 16, 2024 kell 10:56 EL
--- Serveri versioon: 10.4.27-MariaDB
--- PHP versioon: 8.2.0
+-- Loomise aeg: Jaan 20, 2024 kell 09:24 PL
+-- Serveri versioon: 10.4.28-MariaDB
+-- PHP versioon: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,10 +30,18 @@ SET time_zone = "+00:00";
 CREATE TABLE `tellimus` (
   `id` int(11) NOT NULL,
   `tellimus_nimi` int(11) DEFAULT NULL,
-  `riievalmis` int(11) DEFAULT NULL,
-  `puuvalmis` int(11) DEFAULT NULL,
-  `pakitud` int(11) DEFAULT NULL
+  `kasutaja` varchar(30) DEFAULT NULL,
+  `riievalmis` int(11) DEFAULT 0,
+  `puuvalmis` int(11) DEFAULT 0,
+  `pakitud` int(11) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Andmete tõmmistamine tabelile `tellimus`
+--
+
+INSERT INTO `tellimus` (`id`, `tellimus_nimi`, `kasutaja`, `riievalmis`, `puuvalmis`, `pakitud`) VALUES
+(2, 7, 'Vasilius', 1, 1, 1);
 
 --
 -- Indeksid tõmmistatud tabelitele
@@ -54,7 +62,7 @@ ALTER TABLE `tellimus`
 -- AUTO_INCREMENT tabelile `tellimus`
 --
 ALTER TABLE `tellimus`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Tõmmistatud tabelite piirangud

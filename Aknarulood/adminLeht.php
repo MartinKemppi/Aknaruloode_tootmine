@@ -86,6 +86,7 @@ if(isset($_SESSION['kasutaja'])){
                 echo "<td>" . $ruloodriievalmis . "</td>";
                 echo "<td>" . $tellimuspuuvalmis . "</td>";
                 echo "<td>" . $tellimuspakitud . "</td>";
+                echo "<td><a href='?kustuta=$id'>Kustuta</a></td>";
                 echo "</tr>";
             }
         }

@@ -14,10 +14,12 @@ create table rulood(
 create table tellimus(
     id int PRIMARY KEY AUTO_INCREMENT,
     tellimus_nimi int,
-    FOREIGN KEY (tellimus_nimi) REFERENCES rulood(id),
+    FOREIGN KEY (tellimus_nimi) references rulood(id),
+    kasutaja varchar(30),   
     riievalmis int,
     puuvalmis int,
-    pakitud int);
+    pakitud int
+);
 
 ===================================================================================================
 ruloo näided
@@ -179,5 +181,9 @@ riideosakond : f888G|K)eV
 puuosakond : G32s3=$JAX
 komplekteerijad : Ub382#SmHp
 admin : 53Vk$4BEnQ
+
+
+klient näide:
+Vasilius : !Vasilius!
 ===================================================================================================
 

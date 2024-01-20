@@ -52,6 +52,34 @@ if(isset($_SESSION['kasutaja'])){
     <?php
 }
 ?>
+<h2>Tellitud tooded</h2>
+<div style="overflow-x: auto;">
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Toode</th>
+            <th>Seisukord</th>
+        </tr>
+        <?php
+        global $yhendus;
+        if (isset($_SESSION['kasutaja']) && $_SESSION['onAdmin'] == 0) {
+            $kasutaja = $_SESSION['kasutaja'];
+            $kask = $yhendus->prepare("SELECT tellimus.id, tellimus_nimi, rulood.mustrinr, tellimus.pakitud FROM tellimus INNER JOIN rulood ON tellimus.tellimus_nimi = rulood.id WHERE tellimus.kasutaja = ?");
+            $kask->bind_param("s", $kasutaja);
+            $kask->execute();
+            $kask->bind_result($id, $tellimus_nimi, $mustrinr,$pakitud);
+            while ($kask->fetch()) {
+                echo "<tr>";
+                $tellimus_nimi = htmlspecialchars($tellimus_nimi);
+                echo "<td>" . $id . "</td>";
+                echo "<td>" . $mustrinr . "</td>";
+                echo "<td>" . ($pakitud == 1 ? 'Valmis kättesaadavaks' : 'Toode ei ole valmis') . "</td>";
+                echo "</tr>";
+            }
+        }
+        ?>
+    </table>
+</div>
 
 </body>
 </html>
