@@ -64,14 +64,23 @@ if(isset($_SESSION['kasutaja'])){
     <?php
 }
 ?>
+<nav> <!--nav menüü-->
+    <ul>
+        <li>
+            <a href="tellimine.php">Tellimine</a>
+        </li>
+        <li>
+            <a href="naitatellimine.php">Näita minu tellimused</a>
+        </li>
+    </ul>
+</nav>
 <h1>Tellimine</h1>
 <button onclick="naitaTellimusteLisamiseVorm()" id="F_lisaI">Lisa tellimus</button>
 <form id="TellimusteLisamineVorm" method="post">
     <label for="tellimus_id">Vali ruloo:</label>
     <?php echo selectLoend("SELECT id, mustrinr FROM rulood", "tellimus_id"); ?>
     <input type="submit" value="Lisa tellimus" name="tellimine_lisamine" id="lisatellimine">
-    <input type="button" value="Tühista" onclick="window.location.href='index.php'" id="cancel">
+    <input type="button" value="Tühista" onclick="window.location.href='tellimine.php'" id="cancel">
 </form>
-
 </body>
 </html>

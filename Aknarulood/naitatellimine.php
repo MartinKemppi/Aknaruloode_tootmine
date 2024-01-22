@@ -52,6 +52,16 @@ if(isset($_SESSION['kasutaja'])){
     <?php
 }
 ?>
+<nav> <!--nav menüü-->
+    <ul>
+        <li>
+            <a href="tellimine.php">Tellimine</a>
+        </li>
+        <li>
+            <a href="naitatellimine.php">Näita minu tellimused</a>
+        </li>
+    </ul>
+</nav>
 <h2>Tellitud tooded</h2>
 <div style="overflow-x: auto;">
     <table border="1">
@@ -80,6 +90,5 @@ if(isset($_SESSION['kasutaja'])){
         ?>
     </table>
 </div>
-
 </body>
 </html>
