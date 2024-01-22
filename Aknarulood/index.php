@@ -1,7 +1,6 @@
 <?php
 // võtame ühendus serveriga skript
 require_once("conf.php");
-require_once("funktsioonid.php");
 session_start();
 ?>
 <!doctype html>
@@ -45,6 +44,9 @@ session_start();
     </script>
 </head>
 <body>
+<header>
+    <h1>Fiesta rulood</h1>
+</header>
 <div id="modal_log">
     <div class="modal__window">
         <a class="modal__close" href="#">X</a>
@@ -91,5 +93,18 @@ if(isset($_SESSION['kasutaja'])){
     <?php
 }
 ?>
+<div id="reklaamtekst">
+    Tellige meilt rulood oma nägevusega!
+</div>
+<div id="reklaamklienditele">
+    Mõned kliendid juba tellisid endale rulood ja nad näevad suurepäraselt!
+</div>
+<section id="section2">
+    <p>
+        <img src="ruloo1.jpg" alt="ilus pilt" id="pilt1">
+        <img src="ruloo2.jpg" alt="ilus pilt" id="pilt2">
+        <img src="ruloo3.JPG" alt="ilus pilt" id="pilt3">
+    </p>
+</section>
 </body>
 </html>

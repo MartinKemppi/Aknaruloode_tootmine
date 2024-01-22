@@ -1,7 +1,6 @@
 <?php
 // võtame ühendus serveriga skript
 require_once("conf.php");
-require_once("funktsioonid.php");
 session_start();
 ?>
 <!doctype html>
@@ -31,6 +30,9 @@ session_start();
     </script>
 </head>
 <body>
+<header>
+    <h1>Fiesta rulood</h1>
+</header>
 <div id="modal_log">
     <div class="modal__window">
         <a class="modal__close" href="#">X</a>
@@ -62,7 +64,7 @@ if(isset($_SESSION['kasutaja'])){
         </li>
     </ul>
 </nav>
-<h2>Tellitud tooded</h2>
+<h3>Tellitud tooded</h3>
 <div style="overflow-x: auto;">
     <table border="1">
         <tr>

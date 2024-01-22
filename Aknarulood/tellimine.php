@@ -1,8 +1,27 @@
 <?php
 // võtame ühendus serveriga skript
 require_once("conf.php");
-require_once("funktsioonid.php");
 session_start();
+function lisaTellimus($tellimus_nimi,$kasutaja){
+    global $yhendus;
+    $paring=$yhendus->prepare("INSERT INTO tellimus(tellimus_nimi, kasutaja) VALUES(?,?)");
+    $paring->bind_param("is", $tellimus_nimi,$kasutaja);
+    $paring->execute();
+}
+// rippLoend tabelist rulood
+function selectLoend($paring, $nimi){
+    global $yhendus;
+    $paring=$yhendus->prepare($paring);
+    $paring->bind_result($id, $andmed);
+    $paring->execute();
+    $tulemus="<select name='$nimi'>";
+    while($paring->fetch()){
+        $tulemus .="<option value='$id'>$andmed</option>";
+    }
+    $tulemus .="</select>";
+    return $tulemus;
+}
+
 //tellimine lisamine
 if(isset($_REQUEST["tellimine_lisamine"])){
     //ei luba tühja väli ja tühiku sisestamine
@@ -43,6 +62,9 @@ if(isset($_REQUEST["tellimine_lisamine"])){
     </script>
 </head>
 <body>
+<header>
+    <h1>Fiesta rulood</h1>
+</header>
 <div id="modal_log">
     <div class="modal__window">
         <a class="modal__close" href="#">X</a>
@@ -74,10 +96,11 @@ if(isset($_SESSION['kasutaja'])){
         </li>
     </ul>
 </nav>
-<h1>Tellimine</h1>
+<h3>Tellimine</h3>
 <button onclick="naitaTellimusteLisamiseVorm()" id="F_lisaI">Lisa tellimus</button>
 <form id="TellimusteLisamineVorm" method="post">
     <label for="tellimus_id">Vali ruloo:</label>
+    <br>
     <?php echo selectLoend("SELECT id, mustrinr FROM rulood", "tellimus_id"); ?>
     <input type="submit" value="Lisa tellimus" name="tellimine_lisamine" id="lisatellimine">
     <input type="button" value="Tühista" onclick="window.location.href='tellimine.php'" id="cancel">

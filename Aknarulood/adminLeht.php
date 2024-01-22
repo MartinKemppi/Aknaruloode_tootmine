@@ -1,7 +1,6 @@
 <?php
 // võtame ühendus serveriga skript
 require_once("conf.php");
-require_once("funktsioonid.php");
 session_start();
 
 //andmete kustutamine tabelist
@@ -40,6 +39,9 @@ if(isset($_REQUEST["kustuta"])){
     </script>
 </head>
 <body>
+<header>
+    <h1>Fiesta rulood</h1>
+</header>
 <div id="modal_log">
     <div class="modal__window">
         <a class="modal__close" href="#">X</a>
@@ -61,7 +63,7 @@ if(isset($_SESSION['kasutaja'])){
     <?php
 }
 ?>
-<h2>Admin haldus</h2>
+<h3>Admin haldus</h3>
 <div style="overflow-x: auto;">
     <table border="1">
         <tr>
@@ -80,6 +82,12 @@ if(isset($_SESSION['kasutaja'])){
             $kask->execute();
             while ($kask->fetch()) {
                 echo "<tr>";
+                if($ruloodriievalmis == 1 && $tellimuspuuvalmis == 1){
+                    $tellimuspakitud = 1;
+                }
+                else{
+                    $tellimuspakitud = 0;
+                }
                 $tellimus_nimi = htmlspecialchars($tellimus_nimi);
                 echo "<td>" . $id . "</td>";
                 echo "<td>" . $ruloodmustrinr . "</td>";

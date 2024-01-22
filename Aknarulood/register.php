@@ -93,10 +93,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="text" name="username" value="" placeholder="sisesta kasutaja nimi" autocomplete="off" required />
         </div>
         <div class="">
-            <input type="password" name="passwd" value="" placeholder="sisesta salasõna" autocomplete="off" required />
+            <p>Salasõna peab olema vähemalt 5 sümboliga ja <br /> peab olema eriline sümbol, nt: !#$.,:;()</font></p>
         </div>
         <div class="">
-            <p>Salasõna peab olema vähemalt 5 sümboliga ja <br /> peab olema eriline sümbol, nt: !#$.,:;()</font></p>
+            <input type="password" name="passwd" value="" placeholder="sisesta salasõna" autocomplete="off" required />
         </div>
         <div class="">
             <input type="password" name="passwd_again" value="" placeholder="korda sisestatud salasõna" autocomplete="off" required />
