@@ -1,6 +1,6 @@
 <?php
 // võtame ühendus serveriga skript
-require_once("conf.php");
+require_once("conf2.php");
 session_start();
 
 // eiolevalmis

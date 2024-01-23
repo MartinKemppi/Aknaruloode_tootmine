@@ -1,6 +1,6 @@
 <?php
 // võtame ühendus serveriga skript
-require_once("conf.php");
+require_once("conf2.php");
 session_start();
 
 // eiolevalmis
@@ -93,7 +93,6 @@ if(isset($_SESSION['kasutaja'])){
                 $tekst = "Valmis";
                 $seisund = "onvalmis";
                 $tekst2 = "Toode ei ole valmis";
-                $tellimuspakitud = 0;
                 if ($tellimuspakitud == 1) {
                     $tekst = "Ei ole valmis";
                     $seisund = "eiolevalmis";

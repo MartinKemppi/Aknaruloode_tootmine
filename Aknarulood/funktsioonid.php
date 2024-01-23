@@ -1,5 +1,5 @@
 <?php
-require ('conf.php');
+require ('conf2.php');
 //tabeli Rulood tellimine lisamine
 function lisaTellimus($tellimus_nimi,$kasutaja){
     global $yhendus;
