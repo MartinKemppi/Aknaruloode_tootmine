@@ -185,7 +185,17 @@ select, input[type="submit"], input[type="button"],input[type="text"],input[type
 #pilt3{
     left: 60%;
 }
-#reklaamtekst,#reklaamklienditele{
+#reklaamtekst{
     font-size: 14pt;
     text-align: center;
+    position: absolute;
+    top: 15%;
+    left: 40%;
+}
+#reklaamklienditele{
+    font-size: 14pt;
+    text-align: center;
+    position: absolute;
+    top: 20%;
+    left: 32.5%;
 }
