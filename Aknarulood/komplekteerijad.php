@@ -93,11 +93,6 @@ if(isset($_SESSION['kasutaja'])){
                 $tekst = "Valmis";
                 $seisund = "onvalmis";
                 $tekst2 = "Toode ei ole valmis";
-                if ($tellimuspakitud == 1) {
-                    $tekst = "Ei ole valmis";
-                    $seisund = "eiolevalmis";
-                    $tekst2 = "Toode on valmis";
-                }
                 echo "<tr>";
                 $tellimus_nimi = htmlspecialchars($tellimus_nimi);
                 echo "<td>" . $id . "</td>";
@@ -105,8 +100,12 @@ if(isset($_SESSION['kasutaja'])){
                 echo "<td>" . $ruloodriievalmis . "</td>";
                 echo "<td>" . $tellimuspuuvalmis . "</td>";
                 echo "<td>" . $tellimuspakitud . "</td>";
-                if($ruloodriievalmis == 1 && $tellimuspuuvalmis == 1){
+                if($tellimuspakitud == 1){
+                    echo "<td>toode on komplekteeritud</td>";
+                }
+                else if($ruloodriievalmis == 1 && $tellimuspuuvalmis == 1){
                     echo "<td><a href='?$seisund=$id'>$tekst</a></td>";
+
                 }
                 else{
                     echo "<td>Tööd on lõpetamata</td>";
