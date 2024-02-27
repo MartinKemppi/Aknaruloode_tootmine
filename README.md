@@ -1,4 +1,4 @@
-# Aknaruloode tootmine
+# $\color{#1589F0}Aknaruloode tootmine$
 Meie ettevõttes tootame aknarulood vastavalt kliendi tellimustele.
 
 ## Aknaruloode pealeht
@@ -35,3 +35,39 @@ Näevad tellimused, mida peaks komplekteerida. **Komplekteerida võib ainult nee
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | Võib vormistada tellimust ja vaadata oma tellimust.  | Näeb tellitud toode, määrab valmis jah/ei.  | Näeb toode + riide valmis väli tabelis, määrab valmis jah/ei. | Näeb toode + riide valmis ja puu valmis väljad tabelis, määrab valmis jah/ei, kui on teiste osakonnade poolest on valmis.  | Võib kustutada tellimused ja näha tellimused. |
 | Tellimine ja tellimuste vaatmise leht. | Riieosakonna tabeli leht. | Puuosakonna tabeli leht. | Komplekteerijate tabeli leht. | Admin tabeli leht. |
+
+## Kood, mis näitab kasutajate tellimust
+```
+<h3>Tellitud tooded</h3>
+<div style="overflow-x: auto;">
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Toode</th>
+            <th>Seisukord</th>
+        </tr>
+        <?php
+        global $yhendus;
+        if (isset($_SESSION['kasutaja']) && $_SESSION['onAdmin'] == 0) {
+            $kasutaja = $_SESSION['kasutaja'];
+            $kask = $yhendus->prepare("SELECT tellimus.id, tellimus_nimi, rulood.mustrinr, tellimus.pakitud FROM tellimus INNER JOIN rulood ON tellimus.tellimus_nimi = rulood.id WHERE tellimus.kasutaja = ?");
+            $kask->bind_param("s", $kasutaja);
+            $kask->execute();
+            $kask->bind_result($id, $tellimus_nimi, $mustrinr,$pakitud);
+            while ($kask->fetch()) {
+                echo "<tr>";
+                $tellimus_nimi = htmlspecialchars($tellimus_nimi);
+                echo "<td>" . $id . "</td>";
+                echo "<td>" . $mustrinr . "</td>";
+                echo "<td>" . ($pakitud == 1 ? 'Valmis kättesaadavaks' : 'Toode ei ole valmis') . "</td>";
+                echo "</tr>";
+            }
+        }
+        ?>
+    </table>
+</div>
+```
+Siin me pöörame kasutajale, mis on logitud ja kontrollime seda andmebaasidega. Tulemused on esitatud tabelina.
+
+## Lingid
+[Aknarulood](https://martinkemppi22.thkit.ee/content/Aknarulood/index.php)
