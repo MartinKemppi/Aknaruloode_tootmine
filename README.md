@@ -2,7 +2,7 @@
 Meie ettevõttes tootame aknarulood vastavalt kliendi tellimustele.
 
 ## Sisukord
-1. [Projekti kohta](https://github.com/MartinKemppi/Aknaruloode_tootmine?tab=readme-ov-file#projekti-kohta)
+1. [Projekti kohta](https://github.com/MartinKemppi/Aknaruloode_tootmine/blob/main/README.md#projekti-kohta)
 2. [Registreerimine](https://github.com/AntonBuivol/Arvutid/blob/main/README.md#registreerimine)
 3. [Logi sisse](https://github.com/AntonBuivol/Arvutid/blob/main/README.md#logi-sisse)
 4. [Lehed](https://github.com/AntonBuivol/Arvutid/blob/main/README.md#lehed)
