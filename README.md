@@ -2,14 +2,11 @@
 Meie ettevõttes tootame aknarulood vastavalt kliendi tellimustele.
 
 ## Sisukord
-1. [Projekti kohta](https://github.com/MartinKemppi/Aknaruloode_tootmine/blob/main/README.md#projekti-kohta)
-2. [Registreerimine](https://github.com/AntonBuivol/Arvutid/blob/main/README.md#registreerimine)
-3. [Logi sisse](https://github.com/AntonBuivol/Arvutid/blob/main/README.md#logi-sisse)
-4. [Lehed](https://github.com/AntonBuivol/Arvutid/blob/main/README.md#lehed)
-   - [Kasutaja leht](https://github.com/AntonBuivol/Arvutid/blob/main/README.md#kasutaja-leht)
-   - [Admini leht](https://github.com/AntonBuivol/Arvutid/blob/main/README.md#admini-leht)
-5. [Link](https://github.com/AntonBuivol/Arvutid/blob/main/README.md#link)
-6. [Projekti kohta](https://github.com/MartinKemppi/Aknaruloode_tootmine/blob/main/README.md#projekti-kohta)
+1. [Projekti kohta](https://github.com/MartinKemppi/Aknaruloode_tootmine/edit/main/README.md#color1589f0aknaruloode-pealeht)
+2. [Tellimine](https://github.com/MartinKemppi/Aknaruloode_tootmine/edit/main/README.md#color1589f0aknaruloode-pealeht)
+3. [Tellimuste valmistamine](https://github.com/MartinKemppi/Aknaruloode_tootmine?tab=readme-ov-file#color1589f0kuidas-valmistatakse-tellimust)
+4. [Kasutajad](https://github.com/MartinKemppi/Aknaruloode_tootmine?tab=readme-ov-file#color1589f0kasutajad-ja-nende-lehed)
+5. [Link](https://github.com/MartinKemppi/Aknaruloode_tootmine?tab=readme-ov-file#color1589f0kasutajad-ja-nende-lehed)
 
 ## $\color{#1589F0}Aknaruloode pealeht$
 Pealel näeme toode näided, registreerimis võimalus ja sisse logimise võimalus.
