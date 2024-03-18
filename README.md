@@ -1,12 +1,12 @@
 # $\color{#1589F0}Aknaruloode tootmine$
 Meie ettevõttes tootame aknarulood vastavalt kliendi tellimustele.
 
-## Sisukord
-1. [Projekti kohta](https://github.com/MartinKemppi/Aknaruloode_tootmine/edit/main/README.md#color1589f0aknaruloode-pealeht)
-2. [Tellimine](https://github.com/MartinKemppi/Aknaruloode_tootmine/edit/main/README.md#color1589f0aknaruloode-pealeht)
+## $\color{#1589F0}Sisukord$
+1. [Projekti kohta](https://github.com/MartinKemppi/Aknaruloode_tootmine?tab=readme-ov-file#color1589f0aknaruloode-pealeht)
+2. [Tellimine](https://github.com/MartinKemppi/Aknaruloode_tootmine?tab=readme-ov-file#color1589f0aknaruloode-tellimine)
 3. [Tellimuste valmistamine](https://github.com/MartinKemppi/Aknaruloode_tootmine?tab=readme-ov-file#color1589f0kuidas-valmistatakse-tellimust)
 4. [Kasutajad](https://github.com/MartinKemppi/Aknaruloode_tootmine?tab=readme-ov-file#color1589f0kasutajad-ja-nende-lehed)
-5. [Link](https://github.com/MartinKemppi/Aknaruloode_tootmine?tab=readme-ov-file#color1589f0kasutajad-ja-nende-lehed)
+5. [Link](https://github.com/MartinKemppi/Aknaruloode_tootmine?tab=readme-ov-file#color1589f0lingid)
 
 ## $\color{#1589F0}Aknaruloode pealeht$
 Pealel näeme toode näided, registreerimis võimalus ja sisse logimise võimalus.
