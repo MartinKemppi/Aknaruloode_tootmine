@@ -1,6 +1,16 @@
 # $\color{#1589F0}Aknaruloode tootmine$
 Meie ettevõttes tootame aknarulood vastavalt kliendi tellimustele.
 
+## Sisukord
+1. [Projekti kohta](https://github.com/MartinKemppi/Aknaruloode_tootmine?tab=readme-ov-file#projekti-kohta)
+2. [Registreerimine](https://github.com/AntonBuivol/Arvutid/blob/main/README.md#registreerimine)
+3. [Logi sisse](https://github.com/AntonBuivol/Arvutid/blob/main/README.md#logi-sisse)
+4. [Lehed](https://github.com/AntonBuivol/Arvutid/blob/main/README.md#lehed)
+   - [Kasutaja leht](https://github.com/AntonBuivol/Arvutid/blob/main/README.md#kasutaja-leht)
+   - [Admini leht](https://github.com/AntonBuivol/Arvutid/blob/main/README.md#admini-leht)
+5. [Link](https://github.com/AntonBuivol/Arvutid/blob/main/README.md#link)
+6. ### [Projekti kohta]
+
 ## $\color{#1589F0}Aknaruloode pealeht$
 Pealel näeme toode näided, registreerimis võimalus ja sisse logimise võimalus.
 
