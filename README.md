@@ -9,7 +9,7 @@ Meie ettevõttes tootame aknarulood vastavalt kliendi tellimustele.
    - [Kasutaja leht](https://github.com/AntonBuivol/Arvutid/blob/main/README.md#kasutaja-leht)
    - [Admini leht](https://github.com/AntonBuivol/Arvutid/blob/main/README.md#admini-leht)
 5. [Link](https://github.com/AntonBuivol/Arvutid/blob/main/README.md#link)
-6. ### [Projekti kohta]
+6. [Projekti kohta](https://github.com/MartinKemppi/Aknaruloode_tootmine/blob/main/README.md#projekti-kohta)
 
 ## $\color{#1589F0}Aknaruloode pealeht$
 Pealel näeme toode näided, registreerimis võimalus ja sisse logimise võimalus.
