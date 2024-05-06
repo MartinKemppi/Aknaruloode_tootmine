@@ -78,3 +78,11 @@ Siin me pöörame kasutajale, mis on logitud ja kontrollime seda andmebaasidega.
 
 ## $\color{#1589F0}Lingid$
 [Aknarulood](https://martinkemppi22.thkit.ee/content/Aknarulood/index.php)
+
+## $\color{#1589F0}Ülesanned$
+Lisa veel üks pilt pealehe.
+Paigalda 4 pilti pealehes juurde.
+Vaheta värvid sinistest - rohelisele.
+Loo funktsioon, mis teeb järgmist: lisa tellimus vormis, kui oleme valinud mustri, siis vajutades lisa tellimus suunab meid näita minu tellimused.
+Lisa tellimus nuppule määra roheline värv ja tühista punane.
+Lisa pealehe all kuupäev.
