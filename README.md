@@ -7,6 +7,7 @@ Meie ettevõttes tootame aknarulood vastavalt kliendi tellimustele.
 3. [Tellimuste valmistamine](https://github.com/MartinKemppi/Aknaruloode_tootmine?tab=readme-ov-file#color1589f0kuidas-valmistatakse-tellimust)
 4. [Kasutajad](https://github.com/MartinKemppi/Aknaruloode_tootmine?tab=readme-ov-file#color1589f0kasutajad-ja-nende-lehed)
 5. [Link](https://github.com/MartinKemppi/Aknaruloode_tootmine?tab=readme-ov-file#color1589f0lingid)
+6. [Ülesanned](https://github.com/MartinKemppi/Aknaruloode_tootmine/blob/main/README.md#color1589f0%C3%BClesanned)
 
 ## $\color{#1589F0}Aknaruloode pealeht$
 Pealel näeme toode näided, registreerimis võimalus ja sisse logimise võimalus.
