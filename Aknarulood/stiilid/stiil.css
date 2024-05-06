@@ -13,19 +13,19 @@ h3{
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
-    color: #333;
+    color: #00FF00;
     line-height: 1.6;
 }
 
 header {
-    background-color: #3498db;
+    background-color: #00FF00;
     color: #fff;
     padding: 20px;
     text-align: center;
 }
 
 footer {
-    background-color: #333;
+    background-color: #00FF00;
     color: #fff;
     padding: 10px;
     text-align: center;
@@ -34,7 +34,7 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: space-around;
-    background-color: #3498db;
+    background-color: #00FF00;
     padding: 10px;
 }
 
@@ -45,11 +45,11 @@ nav a {
 }
 
 nav a:hover {
-    color: #007bb5;
+    color: #00FF00;
 }
 
 h2 {
-    color: #3498db;
+    color: #00FF00;
 
 }
 #TellimusteLisamineVorm{
@@ -88,7 +88,7 @@ th, td {
 }
 
 th {
-    background-color: #3498db;
+    background-color: #00FF00;
     color: #fff;
 }
 #modal_log{
@@ -139,7 +139,7 @@ th {
     font-size: 16px;
     text-decoration: none;
     color: #fff;
-    background-color: #3498db;
+    background-color: #00FF00;
     border-radius: 5px;
 }
 
@@ -160,7 +160,7 @@ th {
 }
 
 #logivalja:hover, #logisisse:hover, #regimind:hover {
-    background-color: #007bb5;
+    background-color: #00FF00;
 }
 
 select, input[type="submit"], input[type="button"],input[type="text"],input[type="password"], label {
