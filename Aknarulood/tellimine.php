@@ -66,6 +66,9 @@ if(isset($_REQUEST["tellimine_lisamine"])){
 <header>
     <h1>Fiesta rulood</h1>
 </header>
+<div id="date-container">
+    <p>Kuupäev: <?php echo date("d.m.Y"); ?></p>
+</div>
 <div id="modal_log">
     <div class="modal__window">
         <a class="modal__close" href="#">X</a>
