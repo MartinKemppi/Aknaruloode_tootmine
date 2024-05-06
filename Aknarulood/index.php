@@ -104,7 +104,13 @@ if(isset($_SESSION['kasutaja'])){
         <img src="ruloo1.jpg" alt="ilus pilt" id="pilt1">
         <img src="ruloo2.jpg" alt="ilus pilt" id="pilt2">
         <img src="ruloo3.JPG" alt="ilus pilt" id="pilt3">
-        <img src="semen-room.png" alt="ilus pilt" id="pilt4">
+        <img src="semen-room.png" alt="ilus pilt" id="pilt4"/>
+    </p>
+    <p>
+        <img src="komnata1.jpg" alt="ilus pilt" id="pilt5" width="400" height="700">
+        <img src="komnata2.jpg" alt="ilus pilt" id="pilt6" width="400" height="700">
+        <img src="komnata3.jpg" alt="ilus pilt" id="pilt7" width="400" height="700">
+        <img src="komnata4.jpg" alt="ilus pilt" id="pilt8" width="400" height="700"/>
     </p>
 </section>
 </body>
