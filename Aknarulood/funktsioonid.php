@@ -1,5 +1,5 @@
 <?php
-require ('conf2.php');
+require ('yekasov-conf.php');
 //tabeli Rulood tellimine lisamine
 function lisaTellimus($tellimus_nimi,$kasutaja){
     global $yhendus;

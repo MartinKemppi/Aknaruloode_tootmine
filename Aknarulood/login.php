@@ -1,5 +1,5 @@
 <?php
-require_once("conf2.php");
+require_once("yekasov-conf.php");
 global $yhendus;
 
 //kontrollime kas väljad  login vormis on täidetud

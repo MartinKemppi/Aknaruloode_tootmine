@@ -1,6 +1,6 @@
 <?php
 // võtame ühendus serveriga skript
-require_once("conf2.php");
+require_once("yekasov-conf.php");
 session_start();
 
 // eiolevalmis

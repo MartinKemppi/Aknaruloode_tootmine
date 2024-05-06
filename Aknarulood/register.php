@@ -1,6 +1,6 @@
 <?php
 // include our connect script
-require_once("conf2.php");
+require_once("yekasov-conf.php");
 
 // check to see if there is a user already logged in, if so redirect them
 
