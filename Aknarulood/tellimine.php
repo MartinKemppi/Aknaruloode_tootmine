@@ -103,8 +103,8 @@ if(isset($_SESSION['kasutaja'])){
     <label for="tellimus_id">Vali ruloo:</label>
     <br>
     <?php echo selectLoend("SELECT id, mustrinr FROM rulood", "tellimus_id"); ?>
-    <input type="submit" value="Lisa tellimus" name="tellimine_lisamine" id="lisatellimine">
-    <input type="button" value="Tühista" onclick="window.location.href='tellimine.php'" id="cancel">
+    <input type="submit" value="Lisa tellimus" name="tellimine_lisamine" id="lisatellimine" style="background-color: green">
+    <input type="button" value="Tühista" onclick="window.location.href='tellimine.php'" id="cancel" style="background-color: red">
 </form>
 </body>
 </html>
